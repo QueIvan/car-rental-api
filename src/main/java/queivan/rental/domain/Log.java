@@ -20,7 +20,6 @@ import java.util.UUID;
 @Builder
 public class Log {
     @Id
-    @NotNull
     @GeneratedValue
     private UUID id;
     @NotNull

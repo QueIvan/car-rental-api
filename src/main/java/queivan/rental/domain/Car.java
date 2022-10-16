@@ -17,7 +17,6 @@ import java.util.UUID;
 @Builder
 public class Car {
     @Id
-    @NotNull
     @GeneratedValue
     private UUID id;
     @NotNull
@@ -28,6 +27,6 @@ public class Car {
     private Integer productionYear;
     @NotNull
     private Float mileage;
-    @OneToMany(mappedBy = "car", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @OneToMany(mappedBy = "car", cascade = CascadeType.MERGE)
     private List<Rental> history;
 }

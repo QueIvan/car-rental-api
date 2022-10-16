@@ -17,14 +17,13 @@ import java.util.UUID;
 @Builder
 public class Rental {
     @Id
-    @NotNull
     @GeneratedValue
     private UUID id;
     @NotNull
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Car car;
     @NotNull
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Client client;
     @NotNull
     private LocalDateTime rentalDate;

@@ -11,4 +11,5 @@ import java.util.List;
 public interface CarMapper {
     CarDto mapCarToCarDto(Car fetched);
     List<CarDto> mapCarListToCarDtoList(List<Car> fetched);
+    Car mapCarDtoToCar(CarDto dto);
 }

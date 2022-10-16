@@ -7,6 +7,11 @@ plugins {
 group = 'queivan'
 version = '0.0.1-SNAPSHOT'
 
+bootJar {
+    baseName = "RentalAPI"
+    version =  '0.5.1'
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -19,7 +24,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation 'org.jetbrains:annotations:23.0.0'
     compileOnly 'org.projectlombok:lombok'
     implementation 'org.mapstruct:mapstruct:1.5.3.Final'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'

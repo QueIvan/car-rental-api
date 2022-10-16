@@ -12,4 +12,6 @@ public interface RentalMapper {
     RentalDto mapRentalToRentalDto(Rental fetched);
 
     List<RentalDto> mapRentalListToRentalDtoList(List<Rental> fetched);
+
+    Rental mapRentalDtoToRental(RentalDto dto);
 }

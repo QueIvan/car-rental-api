@@ -15,4 +15,8 @@ public class LogFacade {
     public List<LogDto> getAllLogs(){
         return service.getAllLogs();
     }
+
+    public LogDto createLog(LogDto dto){
+        return service.createLog(dto);
+    }
 }

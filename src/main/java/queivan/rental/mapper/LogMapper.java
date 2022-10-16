@@ -9,6 +9,7 @@ import java.util.List;
 
 @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface LogMapper {
-    List<LogDto> mapLogToLogDto(List<Log> fetched);
     Log mapLogDtoToLog(LogDto dto);
+    List<LogDto> mapLogListToLogDtoList(List<Log> fetched);
+    LogDto mapLogToLogDto(Log fetched);
 }

@@ -21,4 +21,15 @@ public class RentalFacade {
         return service.getAllRentals();
     }
 
+    public RentalDto createRental(RentalDto dto){
+        return service.createRental(dto);
+    }
+    public RentalDto updateRental(RentalDto dto){
+        return service.updateRental(dto);
+    }
+
+    public void deleteRental(UUID id){
+        service.deleteRental(id);
+    }
+
 }

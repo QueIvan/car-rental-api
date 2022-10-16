@@ -11,4 +11,6 @@ import java.util.List;
 public interface ClientMapper {
     ClientDto mapClientToClientDto(Client fetched);
     List<ClientDto> mapClientListToClientListDto(List<Client> fetched);
+
+    Client mapClientDtoToClient(ClientDto dto);
 }

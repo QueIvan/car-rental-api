@@ -21,4 +21,15 @@ public class CarFacade {
         return service.getAllCars();
     }
 
+    public CarDto createCar(CarDto dto){
+        return service.createCar(dto);
+    }
+    public CarDto updateCar(CarDto dto){
+        return service.updateCar(dto);
+    }
+
+    public void deleteCar(UUID id){
+        service.deleteCar(id);
+    }
+
 }

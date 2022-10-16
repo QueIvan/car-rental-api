@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -18,7 +18,6 @@ import java.util.UUID;
 @Builder
 public class Client {
     @Id
-    @NotNull
     @GeneratedValue
     private UUID id;
     @NotNull
@@ -28,9 +27,9 @@ public class Client {
     @NotNull
     private String email;
     @NotNull
-    private LocalDateTime dateOfBirth;
+    private LocalDate dateOfBirth;
     @NotNull
     private String documentIdentifier;
-    @OneToMany(mappedBy = "client", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @OneToMany(mappedBy = "client", cascade = CascadeType.MERGE)
     private List<Rental> history;
 }

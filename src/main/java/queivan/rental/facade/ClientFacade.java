@@ -20,4 +20,15 @@ public class ClientFacade {
     public List<ClientDto> getAllClients(){
         return service.getAllClients();
     }
+
+    public ClientDto createClient(ClientDto dto){
+        return service.createClient(dto);
+    }
+    public ClientDto updateClient(ClientDto dto){
+        return service.updateClient(dto);
+    }
+
+    public void deleteClient(UUID id){
+        service.deleteClient(id);
+    }
 }

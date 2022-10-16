@@ -22,6 +22,15 @@ public class LogService {
 
     public List<LogDto> getAllLogs(){
         List<Log> fetched = repository.findAll();
+        return mapper.mapLogListToLogDtoList(fetched);
+    }
+
+    public LogDto createLog(LogDto dto) {
+        Log fetched = repository.save(mapper.mapLogDtoToLog(dto));
+        dbLog(LogDto.builder()
+                .message(String.format("Created Log with id: %s", fetched.getId()))
+                .type(LogType.INFO)
+                .build());
         return mapper.mapLogToLogDto(fetched);
     }
 
